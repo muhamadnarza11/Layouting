@@ -60,7 +60,7 @@
 /* bagian hero */
 .hero {
   height: 450px;
-  background-image: url(/img/mobil2.png);
+  background-image: url(../img/mobil2.png);
   background-size: cover;
   background-position: 0 -400px;
   margin-top: -60px;
