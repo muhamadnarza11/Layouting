@@ -1,0 +1,501 @@
+.container {
+  width: 960px;
+  height: auto;
+  margin: auto;
+  background-color: #7c4e12;
+  box-sizing: border-box;
+  margin-top: 100px;
+  position: relative; /* biar pembungkusnya bsa fix sm yg posisi absolute  */
+}
+
+.topbar {
+  height: 65px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #7d766e;
+  position: fixed; /* posisi nya tetap */
+  z-index: 9999; /* biar posisi konten nya ttp ada diatas dan tdk tertimpa konten lain */
+  opacity: 0.7; /* mengatur transparansi */
+}
+.ig {
+  background-image: url(../img/ribbon70.png);
+  height: 70px;
+  width: 70px;
+  text-indent: -9999;
+  background-repeat: no-repeat; /* biar tdk berulang2 bag nya */
+  display: inline-block;
+  position: absolute; /* biar posisi keluar dari pembungkus nya */
+  top: -11px;
+  right: -2px;
+}
+/* bagian header */
+.header h1 {
+  padding: 10px;
+  padding-left: 40px;
+  color: whitesmoke;
+  text-align: left;
+  font: 30px Arial;
+}
+.header ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding-right: 20px;
+  font-size: 20px;
+}
+.header ul li {
+  display: inline-block;
+  padding: 15px 5px;
+  font-family: Arial;
+}
+.header ul a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.header ul a:hover {
+  color: black;
+}
+
+/* bagian hero */
+.hero {
+  height: 450px;
+  background-image: url(/img/mobil2.png);
+  background-size: cover;
+  background-position: 0 -400px;
+  margin-top: -60px;
+}
+
+/* bagian main */
+.main {
+  padding-left: 40px;
+  width: 600px;
+  float: left;
+  box-sizing: border-box;
+}
+.main h2 {
+  font-size: 30px;
+}
+.main h5 {
+  font: 13px arial;
+  margin-top: -15px;
+}
+.main a {
+  text-decoration: none;
+  color: black;
+}
+.main a:hover {
+  color: whitesmoke;
+}
+.main p {
+  font: 18px sans-serif;
+  padding-bottom: 10px;
+}
+
+/* bagian sidebar */
+.sidebar {
+  width: 300px;
+  font: 25px arial;
+  padding: 5px;
+  float: right;
+}
+.sidebar img {
+  width: 100px;
+  float: right;
+  padding-right: 10px;
+}
+.sidebar p {
+  font: 14px/15px arial;
+}
+.sidebar2 {
+  width: 300px;
+  float: right;
+}
+.sidebar2 img {
+  width: 100px;
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.sidebar2 p {
+  font: 14px/15px arial;
+}
+
+/* bagian footer */
+.footer {
+  background-color: black;
+  text-align: center;
+}
+.footer h4 {
+  padding: 15px;
+  color: whitesmoke;
+}
+.footer a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footer:hover a {
+  color: #7c4e12;
+}
+
+/* clearfix css(float) */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+
+/* media query */
+@media (max-width: 750px) {
+  .container {
+    width: auto;
+  }
+  .header h1 {
+    font-size: 35px;
+  }
+  .header ul li {
+    font-size: 20px;
+  }
+  .hero {
+    background-position: center;
+    margin-top: -90px;
+    width: auto;
+  }
+  .main {
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .main h2 {
+    font-size: 30px;
+  }
+  .main h5 {
+    font-size: 17px;
+  }
+  .main p {
+    font-size: 20px;
+  }
+  .sidebar {
+    width: 250px;
+    float: right;
+    padding: 10px;
+  }
+  .sidebar h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .sidebar p {
+    font: 15px/15px arial;
+    line-height: 1;
+  }
+  .sidebar img {
+    width: 120px;
+  }
+  .sidebar2 {
+    width: 250px;
+    float: right;
+    padding: 10px;
+  }
+  .sidebar2 p {
+    font: 15px/15px arial;
+    line-height: 1;
+    margin: 5px;
+  }
+  .sidebar2 img {
+    width: 120px;
+  }
+  .footer h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+  .header ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 0;
+  }
+  .header ul li {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 19px;
+  }
+  .hero {
+    height: 250px;
+    margin-top: 20px;
+    background-position: center;
+  }
+  .main {
+    width: 370px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .main h2 {
+    font-size: 25px;
+  }
+  .main h5 {
+    font-size: 12px;
+  }
+  .main p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2px;
+  }
+  .sidebar {
+    width: 200px;
+    float: right;
+    padding: 10px;
+  }
+  .sidebar h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .sidebar p {
+    font: 12px/7px arial;
+    line-height: 1;
+  }
+  .sidebar img {
+    width: 80px;
+  }
+  .sidebar2 {
+    width: 200px;
+    float: right;
+    padding: 10px;
+  }
+  .sidebar2 p {
+    font: 12px/7px arial;
+    line-height: 1;
+  }
+  .sidebar2 img {
+    width: 80px;
+  }
+  .footer h4 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+  .ig {
+    background-image: url(/img/ribbon50.png);
+    width: 50px;
+    height: 50px;
+    top: -5px;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+  .header ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 0;
+  }
+  .header ul li {
+    display: block;
+    margin: 5px 0;
+    text-align: right;
+    padding-bottom: 5px;
+  }
+  .hero {
+    margin-top: -50px;
+    height: 250px;
+    background-position: center;
+  }
+  .main h2 {
+    font-size: 27px;
+  }
+  .main {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .main h5 {
+    font-size: 12px;
+  }
+  .main p {
+    font-size: 15px;
+  }
+  .sidebar {
+    width: 93%;
+    padding: 10px;
+    margin-top: -25px;
+  }
+  .sidebar h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .sidebar p {
+    font-size: 15px;
+  }
+  .sidebar img {
+    width: 100px;
+  }
+  .sidebar2 {
+    width: 93%;
+    padding: 5px;
+  }
+  .sidebar2 p {
+    font-size: 15px;
+  }
+  .sidebar2 img {
+    width: 100px;
+  }
+}
+@media (max-width: 250px) {
+  .container {
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .header ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: -10px;
+  }
+  .header ul li {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    padding-bottom: 5px;
+  }
+  .hero {
+    height: 100px;
+    width: auto;
+    margin-top: -30px;
+    background-position: center;
+  }
+
+  .main h2 {
+    font: 15px Arial;
+    font-weight: bold;
+  }
+  .main h5 {
+    font: 8px sans-serif;
+    font-weight: bold;
+  }
+  .main p {
+    font-size: 10px;
+  }
+  .sidebar {
+    width: 93%;
+    padding: 5px;
+  }
+  .sidebar h3 {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 30px;
+  }
+  .sidebar p {
+    font-size: 13px;
+  }
+  .sidebar img {
+    width: 70px;
+  }
+  .sidebar2 {
+    width: 93%;
+    padding: 5px;
+  }
+  .sidebar2 p {
+    font-size: 13px;
+  }
+  .sidebar2 img {
+    width: 70px;
+  }
+  .footer h4 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 170px) {
+  .container {
+    width: 100%;
+  }
+  .ig {
+    background-image: url(/img/ribbon25.png);
+    width: 25px;
+    height: 25px;
+    top: -2px;
+    right: 0;
+  }
+  .header h1 {
+    font-size: 15px;
+    padding: 5px;
+  }
+  .header ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: -15px;
+  }
+  .header ul li {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    padding-bottom: 2px;
+  }
+  .hero {
+    height: 100px;
+    width: auto;
+    margin-top: -30px;
+    background-position: center;
+  }
+
+  .main h2 {
+    font: 15px Arial;
+    font-weight: bold;
+  }
+  .main h5 {
+    font: 8px sans-serif;
+    font-weight: bold;
+  }
+  .main p {
+    font-size: 10px;
+  }
+  .sidebar {
+    width: 93%;
+    padding: 5px;
+  }
+  .sidebar h3 {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 30px;
+  }
+  .sidebar p {
+    font-size: 13px;
+  }
+  .sidebar img {
+    width: 70px;
+  }
+  .sidebar2 {
+    width: 93%;
+    padding: 5px;
+  }
+  .sidebar2 p {
+    font-size: 13px;
+  }
+  .sidebar2 img {
+    width: 70px;
+  }
+  .footer h4 {
+    font-size: 12px;
+  }
+}
